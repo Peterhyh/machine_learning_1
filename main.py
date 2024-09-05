@@ -12,3 +12,6 @@ from PIL import Image, ImageTk
 
 # need to install
 from landmarks import landmarks
+
+
+window = tk.Tk()
