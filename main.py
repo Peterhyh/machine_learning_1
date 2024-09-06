@@ -10,8 +10,7 @@ import cv2
 
 from PIL import Image, ImageTk
 
-# need to install
-from landmarks import landmarks
+from landmark import lm
 
 
 window = tk.Tk()
