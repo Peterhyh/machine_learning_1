@@ -14,4 +14,4 @@ from landmark import lm
 
 
 window = tk.Tk()
-window.geometry("480x700")
+window.geometry("580x700")
