@@ -1,17 +1,20 @@
-import tkinter as tk
-import customtkinter as ck
+import openai
 
-import pandas as pd
-import numpy as np
-import pickle5 as pickle
-
-import mediapipe as mp
-import cv2
-
-from PIL import Image, ImageTk
-
-from landmark import lm
+openai.api_key = "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"
 
 
-window = tk.Tk()
-window.geometry("480x700")
+def chat_with_ai(prompt):
+    response = openai.ChatCompletion.create(
+        model="gpt-3.5-turbo",
+        messages=[{"role": "user", "content": prompt}]
+    )
+    return response.choices[0].message.content.strip()
+
+
+if __name__ == "__main__":
+    while True:
+        user_input = input("You: ")
+        if user_input in ["quit", "exit", "bye"]:
+            break
+        response = chat_with_ai(user_input)
+        print("Chatbot: ", response)
