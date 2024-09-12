@@ -1,6 +1,6 @@
 import openai
 
-openai.api_key = "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"
+openai.api_key = ""
 
 
 def chat_with_ai(prompt):
