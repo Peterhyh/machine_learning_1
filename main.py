@@ -1,4 +1,7 @@
 import openai
+from my_api import api
+
+openai.api_key = api
 
 
 def chat_with_ai(prompt):
@@ -12,7 +15,7 @@ def chat_with_ai(prompt):
 if __name__ == "__main__":
     while True:
         user_input = input("You: ")
-        if user_input in ["quit", "exit", "bye"]:
+        if user_input.lower() in ["quit", "exit", "bye"]:
             break
         response = chat_with_ai(user_input)
         print("Chatbot: ", response)
