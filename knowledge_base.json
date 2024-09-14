@@ -23,6 +23,26 @@
     {
       "question": "",
       "answer": ""
+    },
+    {
+      "question": "what is the command for Git to remove the venv folder from your GitHub repository?",
+      "answer": "Here is the command: git rm --cached -r venv*"
+    },
+    {
+      "question": "thank you!",
+      "answer": "My pleasure!"
+    },
+    {
+      "question": "What is the Python programming language?",
+      "answer": "Python is a high-level, general-purpose programming language known for its readability, simplicity, and versatility. It was created by Guido van Rossum and first released in 1991. Python is designed to be easy to read and write, making it an excellent choice for both beginners and experienced developers."
+    },
+    {
+      "question": "",
+      "answer": "JavaScript is a high-level, interpreted programming language primarily used for enhancing the interactivity and functionality of web pages. It was created by Brendan Eich and first released in 1995. JavaScript is an essential technology for web development, often used alongside HTML and CSS."
+    },
+    {
+      "question": "what is the java programming language?",
+      "answer": "Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It was developed by James Gosling and his team at Sun Microsystems and released in 1995. Java is widely used for building cross-platform applications and is known for its \"write once, run anywhere\" capability."
     }
   ]
 }
