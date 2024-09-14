@@ -4,7 +4,7 @@ from difflib import get_close_matches
 # loading knowledge_base.json to this file (program)
 
 
-def load_knowledge_base(file_path: str) -> dict:
+def load_knowledge_base(file_path: str):
     with open(file_path, "r") as file:
         data: dict = json.load(file)
     return data
@@ -19,14 +19,14 @@ def save_knowledge_base(file_path: str, data: dict):
 # finding the best match from knowledge_base.json
 
 
-def find_best_match(user_question: str, questions: list[str]) -> str | None:
+def find_best_match(user_question: str, questions: list[str]):
     matches: list = get_close_matches(
         user_question, questions, n=1, cutoff=0.7)
     return matches[0] if matches else None
 
 
-def get_answer_for_question(question: str, knowledge_base: dict) -> str | None:
-    for q in knowledge_base["question"]:
+def get_answer_for_question(question: str, knowledge_base: dict):
+    for q in knowledge_base["questions"]:
         if q["question"] == question:
             return q["answer"]
 
@@ -42,18 +42,17 @@ def chat_bot():
             break
 
         # Searching for the best match in knowledge_base.json
-        best_match: str | None = find_best_match(
-            user_input, [q["question"] for q in knowledge_base["questions"]])
+        best_match: str | None = find_best_match(user_input.lower(), [q["question"] for q in knowledge_base["questions"]])
 
         # Bot searching for the answer and responding to user
         if best_match:
             answer: str = get_answer_for_question(best_match, knowledge_base)
             print(f"Bot: {answer}")
         else:
-            print("Bot: I don't know this answer. Can you teach me?")
+            print("Bot: My apologies, I didn't understand. Could you teach me?")
             new_answer: str = input('Type the answer or "no" to skip: ')
 
-            if new_answer.lower() is not 'skip':
+            if new_answer.lower() != 'no':
                 knowledge_base["questions"].append(
                     {"question": user_input, "answer": new_answer})
                 save_knowledge_base('knowledge_base.json', knowledge_base)

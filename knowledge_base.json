@@ -1,3 +1,28 @@
 {
-    "Questions": []
+  "questions": [
+    {
+      "question": "hi",
+      "answer": "Hi!"
+    },
+    {
+      "question": "How are you?",
+      "answer": "I'm a program, I can't feel anything."
+    },
+    {
+      "question": "what is your favorite color?",
+      "answer": "I don't have personal preferences or feelings, but I can help you with anything related to colors! Do you have a favorite color or need information about color theory or design?"
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    },
+    {
+      "question": "",
+      "answer": ""
+    }
+  ]
 }
