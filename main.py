@@ -35,7 +35,7 @@ def chat_bot():
     while True:
         user_input: str = input("You: ")
 
-        if user_input.lower() in ["quit", "bye"]:
+        if user_input.lower() in ["quit", "bye", "cya", "i got to go", "g2g"]:
             print("\nBot: Goodbye! See you soon!")
             break
 
