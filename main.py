@@ -35,7 +35,8 @@ def chat_bot():
     while True:
         user_input: str = input("You: ")
 
-        if user_input.lower() == "quit":
+        if user_input.lower() in ["quit", "bye"]:
+            print("\nGoodbye! See you soon!")
             break
 
         # Searching for the best match in knowledge_base.json
