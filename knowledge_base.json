@@ -43,6 +43,10 @@
     {
       "question": "what is the java programming language?",
       "answer": "Java is a high-level, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It was developed by James Gosling and his team at Sun Microsystems and released in 1995. Java is widely used for building cross-platform applications and is known for its \"write once, run anywhere\" capability."
+    },
+    {
+      "question": "hello",
+      "answer": "Hi!"
     }
   ]
 }
