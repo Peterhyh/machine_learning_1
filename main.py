@@ -55,7 +55,7 @@ def chat_bot():
                 knowledge_base["questions"].append(
                     {"question": user_input, "answer": new_answer})
                 save_knowledge_base('knowledge_base.json', knowledge_base)
-                print("\nBot: Thank you! I have learned a new thing!\n")
+                print("\nBot: Thank you! I have learned a new thing! \n")
 
 
 if __name__ == '__main__':
